@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package procodebaou.passgen;
+package passgen;
 import java.util.Random;
 import java.security.SecureRandom;
 /**
  *
- * @author Boris
+ * @author cortb
  */
-public class passgenAPP extends javax.swing.JFrame { 
-    private int[] elems={10,0,0,0,0};//LENGTH - ESPECIALES (1,0) - Mayus (1,0) - NUMEROS (1,0)
+public class passgen extends javax.swing.JFrame {
+     private int[] elems={10,0,0,0,0};//LENGTH - ESPECIALES (1,0) - Mayus (1,0) - NUMEROS (1,0)
     private String password="";
     private int[] strmin={97,122}; //minimo maximo ascii decimal minusculas
     private int[] strmay={65,90};//minimo maximo ascii decimal mayuscula
@@ -65,12 +65,12 @@ public class passgenAPP extends javax.swing.JFrame {
         System.out.println("password generada: "+password);
         inputPASSWORD.setText(password);
     }
-    public passgenAPP() {   
+    public passgen() {   
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -175,48 +175,48 @@ public class passgenAPP extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void BTNsliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_BTNsliderStateChanged
+    private void BTNsliderStateChanged(javax.swing.event.ChangeEvent evt) {                                       
         // TODO add your handling code here:
         elems[0]=BTNslider.getValue();
         lengthINPUT.setText(""+BTNslider.getValue());
-    }//GEN-LAST:event_BTNsliderStateChanged
+    }                                      
 
-    private void BTNespecialesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_BTNespecialesStateChanged
+    private void BTNespecialesStateChanged(javax.swing.event.ChangeEvent evt) {                                           
 
         if(BTNespeciales.isSelected()){
             elems[1]=1;
         }else{
             elems[1]=0;
         }
-    }//GEN-LAST:event_BTNespecialesStateChanged
+    }                                          
 
-    private void BTNmayusStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_BTNmayusStateChanged
+    private void BTNmayusStateChanged(javax.swing.event.ChangeEvent evt) {                                      
         // TODO add your handling code here:
         if(BTNmayus.isSelected()){
             elems[2]=1;
         }else{
             elems[2]=0;
         }
-    }//GEN-LAST:event_BTNmayusStateChanged
+    }                                     
 
-    private void BTNnumerosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_BTNnumerosStateChanged
+    private void BTNnumerosStateChanged(javax.swing.event.ChangeEvent evt) {                                        
         // TODO add your handling code here:
         if(BTNnumeros.isSelected()){
             elems[3]=1;
         }else{
             elems[3]=0;
         }
-    }//GEN-LAST:event_BTNnumerosStateChanged
+    }                                       
 
-    private void BTNgenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNgenerarActionPerformed
+    private void BTNgenerarActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
         password="";
         GenerarPASSWORD();
-    }//GEN-LAST:event_BTNgenerarActionPerformed
+    }                                          
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JRadioButton BTNespeciales;
     private javax.swing.JButton BTNgenerar;
     private javax.swing.JRadioButton BTNmayus;
@@ -225,5 +225,5 @@ public class passgenAPP extends javax.swing.JFrame {
     private javax.swing.JTextField inputPASSWORD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField lengthINPUT;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
